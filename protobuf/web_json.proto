@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package protobuf;
+
+import "google/protobuf/any.proto";
+
+option go_package = "protobuf";
+
+/**
+ *
+ * @apiDefine WebJSON WebJSON
+ *
+ * @apiParam (WebJSON) {Int32} Code status code
+ * @apiParam (WebJSON) {String} Message message
+ * @apiParam (WebJSON) {google.protobuf.Any} Data data
+ *
+ */
+
+// WebJSON : web json with google/protobuf/any.proto
+message WebJSON {
+    int32 Code = 1;               // status code
+    string Message = 2;           // message
+    google.protobuf.Any Data = 3; // data
+}
